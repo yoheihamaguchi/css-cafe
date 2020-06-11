@@ -1,0 +1,30 @@
+.OverlayPanel {
+  $root: &;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10% 20%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+  }
+  &__head {
+    margin: 0 10px;
+    padding: 24px 36px;
+    border: 2px solid white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 24px;
+    #{$root}:hover & {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  &__body {
+    margin: 16px auto;
+  }
+}
